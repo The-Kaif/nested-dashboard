@@ -96,3 +96,14 @@ body, html {
   a:hover {
     text-decoration: underline;
   }
+  /* styles/View.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header, .footer, .textBlock, .imageComponent {
+  margin-bottom: 20px;
+}

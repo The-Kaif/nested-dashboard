@@ -1,3 +1,11 @@
-const Header = ({ title }) => <header><h1>{title}</h1></header>;
+// components/Header.js
+
+const Header = ({ title }) => {
+  return (
+    <header>
+      <h1>{title}</h1>
+    </header>
+  );
+};
 
 export default Header;

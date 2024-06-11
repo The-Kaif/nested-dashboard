@@ -5,9 +5,11 @@ export const getLandingPages = () => {
   return pages ? JSON.parse(pages) : [];
 };
 
+const landingPagesKey = 'landingPages';
+
 export const getLandingPage = (id) => {
-  const pages = getLandingPages();
-  return pages.find((page) => page.id === id);
+  const landingPages = JSON.parse(localStorage.getItem(landingPagesKey)) || [];
+  return landingPages.find(page => page.id === id);
 };
 
 export const createLandingPage = (page) => {
@@ -18,9 +20,13 @@ export const createLandingPage = (page) => {
 };
 
 export const updateLandingPage = (id, updatedPage) => {
-  let pages = getLandingPages();
-  pages = pages.map((page) => (page.id === id ? updatedPage : page));
-  localStorage.setItem(getKey(), JSON.stringify(pages));
+  const landingPages = JSON.parse(localStorage.getItem(landingPagesKey)) || [];
+  const pageIndex = landingPages.findIndex(page => page.id === id);
+
+  if (pageIndex !== -1) {
+    landingPages[pageIndex] = updatedPage;
+    localStorage.setItem(landingPagesKey, JSON.stringify(landingPages));
+  }
 };
 
 export const deleteLandingPage = (id) => {

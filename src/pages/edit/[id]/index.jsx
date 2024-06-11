@@ -29,6 +29,29 @@ export default function Edit() {
     }));
   };
 
+  const handlePropChange = (index, prop, value) => {
+    const updatedComponents = [...page.components];
+    updatedComponents[index] = {
+      ...updatedComponents[index],
+      props: {
+        ...updatedComponents[index].props,
+        [prop]: value,
+      },
+    };
+    setPage((prevPage) => ({
+      ...prevPage,
+      components: updatedComponents,
+    }));
+  };
+
+  const handleDeleteComponent = (index) => {
+    const updatedComponents = page.components.filter((_, i) => i !== index);
+    setPage((prevPage) => ({
+      ...prevPage,
+      components: updatedComponents,
+    }));
+  };
+
   const handleSave = () => {
     updateLandingPage(id, page);
     router.push('/');
@@ -48,7 +71,51 @@ export default function Edit() {
       <div>
         {page.components.map((component, index) => {
           const Component = components[component.type];
-          return <Component key={index} {...component.props} />;
+          return (
+            <div key={index}>
+              <Component {...component.props} />
+              {component.type === 'Header' && (
+                <input
+                  type="text"
+                  placeholder="Title"
+                  value={component.props.title || ''}
+                  onChange={(e) => handlePropChange(index, 'title', e.target.value)}
+                />
+              )}
+              {component.type === 'Footer' && (
+                <input
+                  type="text"
+                  placeholder="Footer Content"
+                  value={component.props.content || ''}
+                  onChange={(e) => handlePropChange(index, 'content', e.target.value)}
+                />
+              )}
+              {component.type === 'TextBlock' && (
+                <textarea
+                  placeholder="Text"
+                  value={component.props.text || ''}
+                  onChange={(e) => handlePropChange(index, 'text', e.target.value)}
+                />
+              )}
+              {component.type === 'ImageComponent' && (
+                <>
+                  <input
+                    type="text"
+                    placeholder="Image URL"
+                    value={component.props.src || ''}
+                    onChange={(e) => handlePropChange(index, 'src', e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Alt Text"
+                    value={component.props.alt || ''}
+                    onChange={(e) => handlePropChange(index, 'alt', e.target.value)}
+                  />
+                </>
+              )}
+              <button onClick={() => handleDeleteComponent(index)}>Delete</button>
+            </div>
+          );
         })}
       </div>
       <button onClick={handleSave}>Save</button>
