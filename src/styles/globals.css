@@ -6,8 +6,8 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     align-items: center;
     height: 100vh;
   }
@@ -99,7 +99,7 @@ body, html {
   /* styles/View.module.css */
 
 .container {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   padding: 20px;
 }
@@ -107,3 +107,81 @@ body, html {
 .header, .footer, .textBlock, .imageComponent {
   margin-bottom: 20px;
 }
+
+
+/* styles/navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* padding: 10px 20px; */
+  padding: 10px 0 10px 0;
+
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+.logo img {
+  height: 40px;
+  margin-left: 2.5em;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2.5em;
+}
+
+.user-photo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  margin-right: 10px;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0;
+ 
+}
+.dropdown-button:hover{
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #444444;
+  /* padding: 10px; */
+  border-radius: 5px;
+}
+
+.dropdown-menu button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  /* padding: 10px; */
+  /* width: 100%; */
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #555555;
+}
+
+
+

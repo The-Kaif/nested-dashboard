@@ -30,6 +30,8 @@ export const login = (username, password) => {
 
 export const logout = () => {
   localStorage.removeItem('authenticated');
+  // Redirect to the login page
+  window.location.href = '/login';
 };
 
 export const isAuthenticated = () => {
