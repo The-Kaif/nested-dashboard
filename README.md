@@ -4,7 +4,7 @@
 
 This project is a simple web application for managing landing pages. It allows users to create, edit, view, and delete landing pages. The application uses localStorage for data storage, which means all data is stored locally in the user's browser.
 
-## Live : nested-dashboard.vercel.app
+## Live : https://nested-dashboard.vercel.app
 
 ## Features
 
