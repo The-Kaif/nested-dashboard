@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Landing Page Management System
+
+## Overview
+
+This project is a simple web application for managing landing pages. It allows users to create, edit, view, and delete landing pages. The application uses localStorage for data storage, which means all data is stored locally in the user's browser.
+
+## Features
+
+- **Authentication**: Users can register, login, and logout. Authentication is managed using localStorage.
+  
+- **Create**: Users can create new landing pages by providing a title, description, and optionally uploading an image preview.
+  
+- **Edit**: Existing landing pages can be edited to update their title, description, and image preview.
+  
+- **View**: Users can view a detailed representation of each landing page, including its components.
+  
+- **Delete**: Landing pages can be deleted from the system.
+  
+- **Responsive Design**: The application is designed to be responsive and work well on different devices.
+
+## Technologies Used
+
+- **React**: Front-end library for building user interfaces.
+  
+- **Next.js**: React framework for server-side rendering and routing.
+  
+- **LocalStorage**: Browser-based storage for persisting data locally.
+  
+- **React Icons**: Icon library for incorporating icons into the user interface.
+  
+- **React Hot Toast**: Toast notifications for providing feedback to users.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the repository**:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Run the development server**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Open the application**:
+Navigate to `http://localhost:3000` in your web browser.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+- **Register/Login**: If you are a new user, register an account. If you already have an account, login with your credentials.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Dashboard**: Once logged in, you will see a list of your landing pages. You can create new pages, edit existing ones, view detailed previews, and delete pages as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Navigation**: Use the navigation links/buttons to move between different sections of the application.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.

@@ -1,38 +1,18 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import React from "react";
 import Navbar from "./Navbar";
-import { useRouter } from "next/router";
-import { isAuthenticated, logout } from "../utils/auth";
-import { useEffect, useState } from "react";
 
+/**
+ * Layout component wraps the main content of the application with a Navbar.
+ * @param {object} children - The child components or elements to be rendered within the layout.
+ */
 const Layout = ({ children }) => {
-  const router = useRouter();
-  const [authenticated, setAuthenticated] = useState(false);
-
-  useEffect(() => {
-    setAuthenticated(isAuthenticated());
-  }, []);
-
-  const handleLogout = () => {
-    logout();
-    router.push("/login");
-  };
-
   return (
     <>
+      {/* Render the Navbar component */}
       <Navbar />
-      <div className="card">
-        {/* <Header title="Landing Page Dashboard" /> */}
-
+      <div className="container">
+        {/* Main content area */}
         <main>{children}</main>
-        {authenticated ? (
-          <button onClick={handleLogout}>Logout</button>
-        ) : (
-          <div>
-            <a href="/login">Login</a> | <a href="/register">Create Account</a>
-          </div>
-        )}
-        {/* <Footer /> */}
       </div>
     </>
   );
