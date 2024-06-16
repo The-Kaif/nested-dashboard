@@ -4,6 +4,8 @@
 
 This project is a simple web application for managing landing pages. It allows users to create, edit, view, and delete landing pages. The application uses localStorage for data storage, which means all data is stored locally in the user's browser.
 
+## Live : nested-dashboard.vercel.app
+
 ## Features
 
 - **Authentication**: Users can register, login, and logout. Authentication is managed using localStorage.
@@ -55,6 +57,3 @@ Navigate to `http://localhost:3000` in your web browser.
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
