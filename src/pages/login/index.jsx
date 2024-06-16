@@ -130,7 +130,7 @@ export default function Login() {
           </button>
         </form>
         <p className="redirect">
-          Don't have an account?&nbsp;
+          Do not have an account?{" "}
           <Link href="/register" className="register-link">
             Create one
           </Link>

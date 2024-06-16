@@ -359,3 +359,7 @@ textarea {
   font-size: 1.2em;
   color: #666;
 }
+.maxContent{
+  max-width: 500px;
+  max-height: 500px;
+}

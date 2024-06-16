@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 /**
@@ -9,7 +10,8 @@ const ImageComponent = ({ src, alt }) => (
   <div>
     {/* Conditional rendering: Display the image if src is provided */}
     {src ? (
-      <img style={{ maxWidth: "500px", height: "500px" }} src={src} alt={alt} />
+      // <img style={{ maxWidth: "500px", height: "500px" }} src={src} alt={alt} />
+      <Image className="maxContent" src={src} alt={alt} width={500} height={500}/>
     ) : (
       "" // Display nothing if src is not provided
     )}

@@ -40,6 +40,7 @@ export default function View() {
     if (page && id) {
       handleTakeScreenshot(id); // Function to capture and update screenshot
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, id]);
 
   // Function to capture screenshot and update landing page data
